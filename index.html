@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدينة الرشيدية - منصة الإعلانات التجارية</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header role="banner">
+        <nav class="navbar" role="navigation" aria-label="Main Navigation">
+            <div class="logo">
+                <i class="fas fa-mosque"></i>
+                <h1>الرشيدية</h1>
+            </div>
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a href="#home" role="menuitem">الرئيسية</a></li>
+                <li role="none"><a href="#about" role="menuitem">عن المدينة</a></li>
+                <li role="none"><a href="#services" role="menuitem">خدماتنا</a></li>
+                <li role="none"><a href="#promotion" role="menuitem">التسويق</a></li>
+                <li role="none"><a href="#categories" role="menuitem">التصنيفات</a></li>
+                <li role="none"><a href="#contact" role="menuitem">اتصل بنا</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        <section id="hero" class="hero-section" aria-labelledby="hero-title">
+            <div class="hero-content hidden">
+                <h1 id="hero-title" class="animate-title float-element">مرحباً بكم في الرشيدية</h1>
+                <p class="animate-subtitle float-element">نساعدك في الوصول إلى عملائك المستهدفين</p>
+                <button class="cta-button animate-button float-element" onclick="scrollToForm()">
+                    <i class="fas fa-rocket"></i> ابدأ الآن
+                </button>
+            </div>
+        </section>
+
+        <section id="stats" class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card hidden">
+                        <i class="fas fa-store"></i>
+                        <span class="counter" data-target="500">0</span>
+                        <p>محل تجاري</p>
+                    </div>
+                    <div class="stat-card hidden">
+                        <i class="fas fa-users"></i>
+                        <span class="counter" data-target="10000">0</span>
+                        <p>زائر شهرياً</p>
+                    </div>
+                    <div class="stat-card hidden">
+                        <i class="fas fa-handshake"></i>
+                        <span class="counter" data-target="300">0</span>
+                        <p>عميل راضٍ</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services-section" aria-labelledby="services-title">
+            <div class="container">
+                <h2 id="services-title" class="section-title hidden">خدماتنا</h2>
+                <div class="services-grid">
+                    <div class="service-card hidden">
+                        <div class="service-icon">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <h3>التسويق الرقمي</h3>
+                        <p>نساعدك في الوصول إلى عملائك عبر منصات التواصل الاجتماعي</p>
+                    </div>
+                    <div class="service-card hidden">
+                        <div class="service-icon">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <h3>التصوير الاحترافي</h3>
+                        <p>خدمات تصوير احترافية لمنتجاتك ومحلك التجاري</p>
+                    </div>
+                    <div class="service-card hidden">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>تحليل البيانات</h3>
+                        <p>تقارير تحليلية عن أداء إعلاناتك وتفاعل العملاء</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="promotion" class="promotion-section" aria-labelledby="promotion-title">
+            <div class="container">
+                <div class="promotion-content">
+                    <div class="promotion-text hidden">
+                        <h2 id="promotion-title">روّج لمشروعك معنا</h2>
+                        <p>نساعدك في الوصول إلى عملائك المستهدفين من خلال منصتنا المتكاملة</p>
+                        <ul class="benefits-list">
+                            <li><i class="fas fa-check"></i> وصول أوسع للعملاء</li>
+                            <li><i class="fas fa-check"></i> إدارة احترافية لحملتك الإعلانية</li>
+                            <li><i class="fas fa-check"></i> تقارير أداء مفصلة</li>
+                            <li><i class="fas fa-check"></i> دعم فني على مدار الساعة</li>
+                        </ul>
+                    </div>
+                    <div class="promotion-form hidden">
+                        <form id="promotionForm">
+                            <div class="form-group">
+                                <label for="businessName">اسم المشروع</label>
+                                <input id="nameProject" type="text" id="businessName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="category">نوع النشاط</label>
+                                <select id="typeProject" id="category" required>
+                                    <option value="">اختر نوع النشاط</option>
+                                    <option value="retail">متجر</option>
+                                    <option value="restaurant">مطعم</option>
+                                    <option value="service">خدمات</option>
+                                    <option value="other">أخرى</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">الاسم الشخصي </label>
+                                <input id="userName" type="text" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">رقم الهاتف</label>
+                                <input id="userPhone" type="tel" id="phone" required>
+                            </div>
+                            <button type="submit" class="submit-button">
+                                <span class="button-text">إرسال الطلب</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section" aria-labelledby="about-title">
+            <div class="container">
+                <h2 id="about-title">عن مدينة الرشيدية</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>الرشيدية هي مدينة مغربية تقع في الجنوب الشرقي للمملكة، وتعتبر بوابة الصحراء المغربية. تتميز بموقعها الاستراتيجي وتراثها الثقافي الغني.</p>
+                        <ul class="city-features">
+                            <li><i class="fas fa-map-marker-alt"></i> الموقع: جنوب شرق المغرب</li>
+                            <li><i class="fas fa-users"></i> عدد السكان: حوالي 90,000 نسمة</li>
+                            <li><i class="fas fa-temperature-high"></i> المناخ: صحراوي</li>
+                            <li><i class="fas fa-landmark"></i> معالم تاريخية متنوعة</li>
+                        </ul>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1548013146-72479768bada" alt="صورة بانورامية لمدينة الرشيدية" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="categories" class="categories-section" aria-labelledby="categories-title">
+            <div class="container">
+                <h2 id="categories-title">تصفح حسب الفئة</h2>
+                <div class="category-grid">
+                    <div class="category-card">
+                        <i class="fas fa-store"></i>
+                        <h3>محلات تجارية</h3>
+                        <p>اكتشف أفضل المحلات التجارية في المدينة</p>
+                    </div>
+                    <div class="category-card">
+                        <i class="fas fa-utensils"></i>
+                        <h3>مطاعم ومقاهي</h3>
+                        <p>أشهى المأكولات التقليدية والعصرية</p>
+                    </div>
+                    <div class="category-card">
+                        <i class="fas fa-hotel"></i>
+                        <h3>فنادق وإقامة</h3>
+                        <p>أماكن إقامة مريحة لجميع الميزانيات</p>
+                    </div>
+                    <div class="category-card">
+                        <i class="fas fa-shopping-bag"></i>
+                        <h3>تسوق</h3>
+                        <p>أفضل مراكز التسوق والأسواق التقليدية</p>
+                    </div>
+                    <div class="category-card">
+                        <i class="fas fa-car"></i>
+                        <h3>خدمات النقل</h3>
+                        <p>خدمات النقل والتأجير</p>
+                    </div>
+                    <div class="category-card">
+                        <i class="fas fa-briefcase"></i>
+                        <h3>خدمات مهنية</h3>
+                        <p>خدمات متنوعة للأفراد والشركات</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tourism" class="tourism-section">
+            <div class="container">
+                <h2>معالم سياحية</h2>
+                <div class="tourism-grid">
+                    <div class="tourism-card">
+                        <img src="https://images.unsplash.com/photo-1548013146-72479768bada" alt="صورة لواحة خضراء في الرشيدية" loading="lazy">
+                        <div class="tourism-content">
+                            <h3>الواحات</h3>
+                            <p>استكشف الواحات الخلابة المحيطة بالمدينة</p>
+                        </div>
+                    </div>
+                    <div class="tourism-card">
+                        <img src="https://images.unsplash.com/photo-1548013146-72479768bada" alt="صورة لقصر تاريخي في الرشيدية" loading="lazy">
+                        <div class="tourism-content">
+                            <h3>القصور التاريخية</h3>
+                            <p>زيارة القصور التاريخية والمعالم الأثرية</p>
+                        </div>
+                    </div>
+                    <div class="tourism-card">
+                        <img src="https://images.unsplash.com/photo-1548013146-72479768bada" alt="صورة لسوق تقليدي في الرشيدية" loading="lazy">
+                        <div class="tourism-content">
+                            <h3>الأسواق التقليدية</h3>
+                            <p>تسوق في الأسواق التقليدية الشعبية</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="featured-ads" class="ads-section">
+            <div class="container">
+                <h2>أحدث الإعلانات</h2>
+                <div class="ads-grid">
+                    <div class="ad-card">
+                        <div class="ad-image">
+                            <img src="https://images.unsplash.com/photo-1548013146-72479768bada" alt="صورة إعلانية لمطعم" loading="lazy">
+                        </div>
+                        <div class="ad-content">
+                            <span class="ad-category">مطعم</span>
+                            <h3>مطعم الواحة التقليدي</h3>
+                            <p>أشهى المأكولات المغربية التقليدية</p>
+                            <div class="ad-footer">
+                                <span class="ad-price">متوسط السعر: 100 درهم</span>
+                                <button class="details-button">التفاصيل</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ad-card">
+                        <div class="ad-image">
+                            <img src="https://images.unsplash.com/photo-1548013146-72479768bada" alt="صورة إعلانية لفندق" loading="lazy">
+                        </div>
+                        <div class="ad-content">
+                            <span class="ad-category">فندق</span>
+                            <h3>فندق النخيل</h3>
+                            <p>إقامة فاخرة مع إطلالة على الواحة</p>
+                            <div class="ad-footer">
+                                <span class="ad-price">ابتداء من 500 درهم</span>
+                                <button class="details-button">التفاصيل</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="promo-videos" class="promo-videos-section">
+            <div class="container">
+                <h2 class="section-title">فيديوهات تسويقية</h2>
+                <div class="video-grid">
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/jDDaplaOz7Q" title="التسويق الرقمي" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="video-info">
+                            <h3>التسويق الرقمي</h3>
+                            <p>كيف نساعدك في الوصول إلى عملائك المستهدفين</p>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/Ok7JGp7gNUc" title="خدمات التصوير" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="video-info">
+                            <h3>خدمات التصوير الاحترافي</h3>
+                            <p>جودة عالية لمحتواك البصري</p>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/h8HFh-yVeZk" title="تحليل البيانات" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="video-info">
+                            <h3>تحليل البيانات والتقارير</h3>
+                            <p>فهم أفضل لسوقك المستهدف</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials-section" aria-labelledby="testimonials-title">
+            <div class="container">
+                <h2 id="testimonials-title" class="section-title">آراء عملائنا</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"خدمة ممتازة وفريق عمل محترف. ساعدوني في تطوير تواجدي الرقمي بشكل كبير."</p>
+                            <div class="testimonial-author">
+                                <img src="https://i.pravatar.cc/150?img=1" alt="صورة العميل أحمد المغربي" loading="lazy">
+                                <div class="author-info">
+                                    <h4>أحمد المغربي</h4>
+                                    <span>صاحب مطعم</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="testimonial-text">"نتائج مذهلة في وقت قصير. الخدمات التسويقية ساعدت في زيادة مبيعاتي بشكل ملحوظ."</p>
+                            <div class="testimonial-author">
+                                <img src="https://i.pravatar.cc/150?img=2" alt="صورة العميل فاطمة العلوي" loading="lazy">
+                                <div class="author-info">
+                                    <h4>فاطمة العلوي</h4>
+                                    <span>صاحبة متجر أزياء</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"تجربة رائعة مع فريق محترف. التحليلات والتقارير ساعدتني في فهم سوقي بشكل أفضل."</p>
+                            <div class="testimonial-author">
+                                <img src="https://i.pravatar.cc/150?img=3" alt="صورة العميل كريم الحسني" loading="lazy">
+                                <div class="author-info">
+                                    <h4>كريم الحسني</h4>
+                                    <span>مدير شركة عقارات</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"أفضل خدمة تسويقية جربتها. النتائج كانت أفضل من توقعاتي بكثير."</p>
+                            <div class="testimonial-author">
+                                <img src="https://i.pravatar.cc/150?img=4" alt="صورة العميل سارة الناصري" loading="lazy">
+                                <div class="author-info">
+                                    <h4>سارة الناصري</h4>
+                                    <span>صاحبة صالون تجميل</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>تواصل معنا</h3>
+                <p><i class="fas fa-envelope"></i> info@errachidia.ma</p>
+                <p><i class="fas fa-phone"></i> +212-535-572-000</p>
+                <p><i class="fas fa-map-marker-alt"></i> الرشيدية، المغرب</p>
+            </div>
+            <div class="footer-section">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="#about">عن المدينة</a></li>
+                    <li><a href="#ads">الإعلانات</a></li>
+                    <li><a href="#tourism">السياحة</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>تابعنا</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 مدينة الرشيدية - جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
